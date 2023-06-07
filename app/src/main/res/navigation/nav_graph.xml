@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.splash.presentation.SplashFragment"
+        tools:layout="@layout/fragment_splash"/>
+
+    <fragment
+        android:id="@+id/enterNumberFragment"
+        android:name="com.example.authorisation.presentation.enter_number.EnterNumberFragment"
+        tools:layout="@layout/fragment_enter_number" />
+
+    <fragment
+        android:id="@+id/enterAuthorisationCodeFragment"
+        android:name="com.example.authorisation.presentation.enter_authorisation_code.EnterAuthorisationCodeFragment"
+        tools:layout="@layout/fragment_enter_authorisation_code" />
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.registration.presentation.RegistrationFragment"
+        tools:layout="@layout/fragment_registration" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.main.presentation.MainFragment"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.example.messages.presentation.MessagesFragment"
+        tools:layout="@layout/fragment_messages" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.profile.presentation.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

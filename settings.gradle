@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Friends Tracker"
+include ':app'
+include ':features'
+include ':features:authorisation'
+include ':core'
+include ':core:theme'
+include ':features:splash'
+include ':core:common'
+include ':data'
+include ':features:registration'
+include ':features:main'
+include ':features:profile'
+include ':features:messages'

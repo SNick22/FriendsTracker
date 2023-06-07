@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.friendstracker'
+    compileSdk buildConfig.compileSdk
+
+    defaultConfig {
+        applicationId "com.example.friendstracker"
+        minSdk buildConfig.minSdk
+        targetSdk buildConfig.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    def keystoreProperties = new Properties()
+    keystoreProperties.load(new FileInputStream(rootProject.file("keys.properties")))
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'API_YANDEX_MAPS', keystoreProperties['yandexMapsApiKey']
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KaptGenerateStubs).configureEach {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+
+    implementation libs.core_ktx
+
+    implementation libs.app_compat
+
+    implementation libs.android_material
+
+    implementation libs.retrofit
+    implementation libs.okhttp
+    implementation libs.okhttp_logging_interceptor
+    implementation libs.gson
+    implementation libs.converter_gson
+
+    implementation libs.coroutines_core
+    implementation libs.coroutines_android
+
+    implementation libs.fragment
+
+    implementation libs.dagger
+    kapt libs.dagger_compiler
+
+    implementation libs.navigation_fragment
+    implementation libs.navigation_ui
+
+    implementation libs.yandex_maps
+
+    //modules
+    implementation project(app_modules.core.theme)
+    implementation project(app_modules.core.common)
+    implementation project(app_modules.data)
+    implementation project(app_modules.features.authorisation)
+    implementation project(app_modules.features.splash)
+    implementation project(app_modules.features.registration)
+    implementation project(app_modules.features.main)
+    implementation project(app_modules.features.messages)
+    implementation project(app_modules.features.profile)
+}

@@ -1,0 +1,10 @@
+<resources>
+    <string name="sign_in">Вход</string>
+    <string name="enter_phone_number">Номер телефона</string>
+    <string name="get_code">Получить код</string>
+    <string name="authorisation_code">Код авторизации</string>
+    <string name="authorisation_code_desc">Мы выслали смс-код на ваш номер</string>
+    <string name="enter_the_code">Введите код</string>
+    <string name="phone_incorrect">Неправильный формат номера</string>
+    <string name="wrong_code">Неверный код</string>
+</resources>

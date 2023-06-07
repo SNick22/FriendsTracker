@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="smooth_button_horizontal_space" type="dimen">40dp</item>
+    <item name="smooth_button_vertical_space" type="dimen">24dp</item>
+    <item name="oval_button_vertical_space" type="dimen">100dp</item>
+</resources>

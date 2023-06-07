@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonMain">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="android:alpha">0.8</item>
+    </style>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="registration">Регистрация</string>
+    <string name="name">Имя</string>
+    <string name="login">Логин</string>
+    <string name="finish_registration">Завершить регистрацию</string>
+    <string name="registration_desc">Ты, похоже, в первый раз здесь? Заполни следующие поля, чтобы
+    завершить регистрацию.</string>
+    <string name="empty_username">Логин не может быть пустым</string>
+    <string name="empty_name">Имя не может быть пустым</string>
+    <string name="busy_username">Такой логин уже занят</string>
+</resources>
